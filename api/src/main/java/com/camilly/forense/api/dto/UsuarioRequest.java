@@ -2,6 +2,8 @@ package com.camilly.forense.api.dto;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import com.camilly.forense.api.model.enums.CargoUsuario;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
@@ -18,7 +20,9 @@ public record UsuarioRequest(
     String email,
 
     @NotBlank(message = "A senha é obrigatória")
-    String senha
+    String senha,
+
+    CargoUsuario cargo
 ) {
     
 }
